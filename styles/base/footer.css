@@ -1,0 +1,7 @@
+footer {
+  padding: var(--s2);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  font-size: var(--s-1);
+} 

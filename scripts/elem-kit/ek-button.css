@@ -1,0 +1,72 @@
+:host { display: inline-block }
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: var(--s0);
+  border-radius: 9999px;
+  background: var(--button-bg, var(--accent));
+  color: var(--button-color, var(--bg));
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.7);
+  transition: all 0.1s ease;
+  padding: var(--button-padding, var(--s-2) var(--s0));
+  min-inline-size: 10ch;
+  text-align: center;
+}
+
+/* Variants */
+:host([variant="text"]) button {
+  --button-bg: transparent;
+  --button-color: var(--accent);
+  padding: var(--s-4);
+  min-inline-size: 0;
+  box-shadow: none;
+}
+
+:host([variant="secondary"]) button {
+  --button-bg: var(--bg);
+  --button-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent), 0 2px 7px rgba(0, 0, 0, 0.7);
+}
+
+/* Icon handling */
+button:has(ek-icon) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-4);
+}
+
+:host([icon-only]) button {
+  padding: var(--s-2);
+  min-inline-size: 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+:host([icon-position="end"]) button { flex-direction: row-reverse }
+
+/* Sizes */
+:host([size="small"]) button { font-size: var(--s-1) }
+:host([size="large"]) button { font-size: var(--s1) }
+
+/* States */
+button:hover { filter: brightness(1.1) }
+
+button:active,
+:host([variant="secondary"]) button:active {
+  transform: translateY(1px) scale(0.99);
+  filter: brightness(0.9);
+  box-shadow: none;
+}
+
+:host([loading]) button {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+:host([disabled]) button {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+} 

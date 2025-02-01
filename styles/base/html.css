@@ -1,0 +1,94 @@
+/* Standard HTML Elements */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--s4); }
+h2 { font-size: var(--s3); }
+h3 { font-size: var(--s2); }
+h4 { font-size: var(--s1); }
+h5 { font-size: var(--s0); }
+h6 { font-size: var(--s-1); }
+
+/* Text Elements */
+p {
+  margin-bottom: var(--s-2);
+  max-width: 70ch;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+  margin: var(--s1) 0;
+  padding-left: var(--s2);
+}
+
+/* Inline Elements */
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* Block Elements */
+blockquote {
+  margin: var(--s2) 0;
+  padding-left: var(--s1);
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+}
+
+hr {
+  margin: var(--s2) 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* Code */
+code, pre {
+  font-family: monospace;
+  background: var(--bg-secondary);
+  padding: var(--s-2);
+  border-radius: 4px;
+}
+
+pre {
+  padding: var(--s0);
+  margin: var(--s1) 0;
+  overflow-x: auto;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--s1) 0;
+}
+
+th, td {
+  padding: var(--s-1);
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  background: var(--bg-secondary);
+  font-weight: 600;
+} 

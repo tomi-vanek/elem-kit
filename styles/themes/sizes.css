@@ -1,0 +1,44 @@
+/* Base sizes with single multiplier */
+:root {
+  /* Base multiplier 1.2 */
+  --s-multiplier: 1.2;
+  
+  /* Fluid base size scaling with viewport width
+     - Minimum: 14px (0.875rem) at 320px viewport
+     - Maximum: 18px (1.125rem) at 1920px viewport
+     - Scales fluidly between these points */
+  --s0: clamp(0.875rem, 0.8rem + 0.375vw, 1.125rem);
+  
+  /* Smaller sizes */
+  --s-6: calc(var(--s0) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier));
+  --s-5: calc(var(--s0) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier));
+  --s-4: calc(var(--s0) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier));
+  --s-3: calc(var(--s0) / var(--s-multiplier) / var(--s-multiplier) / var(--s-multiplier));
+  --s-2: calc(var(--s0) / var(--s-multiplier) / var(--s-multiplier));
+  --s-1: calc(var(--s0) / var(--s-multiplier));
+  
+  /* Larger sizes */
+  --s1: calc(var(--s0) * var(--s-multiplier));
+  --s2: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier));
+  --s3: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
+  --s4: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
+  --s5: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
+  --s6: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
+}
+
+/* Screen size adjustments */
+@media (max-width: 768px) {
+  :root { --s0: 0.9375rem; } /* 15px */
+}
+
+@media (max-width: 480px) {
+  :root { --s0: 0.875rem; }  /* 14px */
+}
+
+@media (min-width: 1200px) {
+  :root { --s0: 1.0625rem; } /* 17px */
+}
+
+@media (min-width: 1600px) {
+  :root { --s0: 1.125rem; }  /* 18px */
+} 

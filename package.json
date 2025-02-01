@@ -1,0 +1,20 @@
+{
+  "name": "fold-comp",
+  "version": "1.0.0",
+  "description": "Modern, lightweight web components library",
+  "author": "Tomi Vanek",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web-components",
+    "ui",
+    "components",
+    "vanilla-js"
+  ],
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3"
+  }
+}

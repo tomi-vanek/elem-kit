@@ -1,0 +1,38 @@
+/* Color Themes */
+:root {
+  /* Light theme */
+  --bg: #fefefe;
+  --text: #212529;
+  --accent: #0d6efd;
+  --border: #dee2e6;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  
+  /* Additional semantic colors */
+  --success: #198754;
+  --warning: #ffc107;
+  --error: #dc3545;
+  --info: #0dcaf0;
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark theme */
+:root.dark-theme {
+  --bg: #212529;
+  --text: #f8f9fa;
+  --accent: #3d8bfd;
+  --border: #495057;
+  --bg-primary: #212529;
+  --bg-secondary: #343a40;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --nav-bg: rgba(33, 37, 41, 0.95);
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  transition: all 0.3s ease-in-out;
+} 
