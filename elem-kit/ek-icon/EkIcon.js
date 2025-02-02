@@ -1,7 +1,7 @@
-import { linkCss } from './_support.js'
+import { linkCss } from '../ek-support.js'
 
 // Icon Web Component - loads and displays SVG icons from bootstrap-icons
-class EkIcon extends HTMLElement {
+export class EkIcon extends HTMLElement {
   static elemName = 'ek-icon'
   static observedAttributes = ['name', 'size'] // Using static class field for simplicity
 
@@ -33,7 +33,7 @@ class EkIcon extends HTMLElement {
     if (!name) return
 
     // Initialize container with loading state
-    this.shadowRoot.innerHTML = `${linkCss(EkIcon.elemName)}<div class="icon-container">Loading...</div>`
+    this.shadowRoot.innerHTML = `${linkCss(import.meta.url, EkIcon.elemName)}<div class="icon-container">Loading...</div>`
 
     // Update container with icon if available
     const [iconSvg, container] = [await this.#loadIcon(name), this.shadowRoot.querySelector('.icon-container')]
@@ -46,6 +46,3 @@ class EkIcon extends HTMLElement {
     if (oldValue !== newValue && this.isConnected) this.#render()
   }
 }
-
-// Register once
-customElements.get(EkIcon.elemName) || customElements.define(EkIcon.elemName, EkIcon) 

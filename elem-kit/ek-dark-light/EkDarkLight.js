@@ -1,7 +1,6 @@
-// Theme Switcher Component - Toggles between dark and light themes with persistence
-import { linkCss } from './_support.js'
+import { linkCss } from '../ek-support.js'
 
-class EkDarkLight extends HTMLElement {
+export class EkDarkLight extends HTMLElement {
   static elemName = 'ek-dark-light'
 
   constructor() {
@@ -26,7 +25,7 @@ class EkDarkLight extends HTMLElement {
 
   #render() {
     const content = `<ek-button icon="${this.isDark ? 'sun' : 'moon'}" icon-only variant="text" size="small"></ek-button>`
-    this.shadowRoot.innerHTML = linkCss(EkDarkLight.elemName) + content
+    this.shadowRoot.innerHTML = linkCss(import.meta.url, EkDarkLight.elemName) + content
     this.shadowRoot.querySelector('ek-button')?.addEventListener('click', this.#handleClick)
   }
 
@@ -37,7 +36,4 @@ class EkDarkLight extends HTMLElement {
                   window.matchMedia('(prefers-color-scheme: dark)').matches
     this.#render()
   }
-}
-
-// Register once
-customElements.get(EkDarkLight.elemName) || customElements.define(EkDarkLight.elemName, EkDarkLight) 
+} 

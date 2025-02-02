@@ -1,7 +1,7 @@
-import { linkCss } from './_support.js'
+import { linkCss } from '../ek-support.js'
 
 // Button Web Component - Customizable button with icon support and loading states
-class EkButton extends HTMLElement {
+export class EkButton extends HTMLElement {
   static elemName = 'ek-button'
   static observedAttributes = ['variant', 'size', 'icon', 'icon-position', 'loading', 'disabled', 'onclick']
 
@@ -52,7 +52,7 @@ class EkButton extends HTMLElement {
       </button>
     `
 
-    this.shadowRoot.innerHTML = linkCss(EkButton.elemName) + content
+    this.shadowRoot.innerHTML = linkCss(import.meta.url, EkButton.elemName) + content
     this.shadowRoot.querySelector('button')?.addEventListener('click', this.#handleClick)
   }
 
@@ -66,6 +66,3 @@ class EkButton extends HTMLElement {
       : this.#render()
   }
 }
-
-// Register once
-customElements.get(EkButton.elemName) || customElements.define(EkButton.elemName, EkButton) 

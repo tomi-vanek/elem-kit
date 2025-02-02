@@ -1,4 +1,4 @@
-import { linkCss } from './_support.js'
+import { linkCss } from "../ek-support.js"
 
 /**
  * Responsive Carousel Web Component
@@ -25,7 +25,7 @@ import { linkCss } from './_support.js'
  *   - 'center': Centers all items
  *   - 'right': Aligns to end
  */
-class EkCarousel extends HTMLElement {
+export class EkCarousel extends HTMLElement {
   static elemName = 'ek-carousel'
   static observedAttributes = ['align']
 
@@ -203,7 +203,7 @@ class EkCarousel extends HTMLElement {
         </div>
       </div>
     `
-    this.shadowRoot.innerHTML = linkCss(EkCarousel.elemName) + content
+    this.shadowRoot.innerHTML = linkCss(import.meta.url, EkCarousel.elemName) + content
 
     // Setup navigation
     Object.values(EkCarousel.NAV).forEach(({ key, direction }) => {
@@ -230,6 +230,3 @@ class EkCarousel extends HTMLElement {
     this.#updatePosition()
   }
 }
-
-// Register once
-customElements.get(EkCarousel.elemName) || customElements.define(EkCarousel.elemName, EkCarousel) 

@@ -1,8 +1,8 @@
 // Header Component - Responsive header with auto-hide on scroll
-import { linkCss } from './_support.js'
+import { linkCss } from '../elem-kit/ek-support.js'
 
-class EkHeader extends HTMLElement {
-  static elemName = 'ek-header'
+class AppHeader extends HTMLElement {
+  static elemName = 'app-header'
   #lastScroll = 0
 
   constructor() {
@@ -29,12 +29,12 @@ class EkHeader extends HTMLElement {
   #render() {
     const content = `
       <div class="header-content">
-        <ek-nav></ek-nav>
+        <app-nav></app-nav>
         <ek-dark-light></ek-dark-light>
       </div>
     `
-    this.shadowRoot.innerHTML = linkCss(EkHeader.elemName) + content
-    this.shadowRoot.querySelector('ek-nav')?.addEventListener('click', this.#handleClick)
+    this.shadowRoot.innerHTML = linkCss(import.meta.url, AppHeader.elemName) + content
+    this.shadowRoot.querySelector('app-nav')?.addEventListener('click', this.#handleClick)
   }
 
   // Lifecycle callbacks
@@ -45,4 +45,4 @@ class EkHeader extends HTMLElement {
 }
 
 // Register once
-customElements.get(EkHeader.elemName) || customElements.define(EkHeader.elemName, EkHeader) 
+customElements.get(AppHeader.elemName) || customElements.define(AppHeader.elemName, AppHeader) 

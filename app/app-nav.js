@@ -1,8 +1,8 @@
 // Navigation Component - Responsive navigation with smooth scrolling
-import { linkCss } from './_support.js'
+import { linkCss } from '../elem-kit/ek-support.js'
 
-class EkNav extends HTMLElement {
-  static elemName = 'ek-nav'
+class AppNav extends HTMLElement {
+  static elemName = 'app-nav'
 
   constructor() {
     super()
@@ -27,7 +27,7 @@ class EkNav extends HTMLElement {
         </ul>
       </nav>
     `
-    this.shadowRoot.innerHTML = linkCss(EkNav.elemName) + content
+    this.shadowRoot.innerHTML = linkCss(import.meta.url, AppNav.elemName) + content
     this.shadowRoot.querySelector('nav')?.addEventListener('click', this.#handleClick)
   }
 
@@ -36,4 +36,4 @@ class EkNav extends HTMLElement {
 }
 
 // Register once
-customElements.get(EkNav.elemName) || customElements.define(EkNav.elemName, EkNav) 
+customElements.get(AppNav.elemName) || customElements.define(AppNav.elemName, AppNav) 
