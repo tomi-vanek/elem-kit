@@ -32,8 +32,10 @@ export class EkDarkLight extends HTMLElement {
   // Lifecycle callbacks
   connectedCallback() {
     // Initialize theme from storage or system preference
-    this.isDark = localStorage.getItem('theme') === 'dark' ?? 
-                  window.matchMedia('(prefers-color-scheme: dark)').matches
+    const storedTheme = localStorage.getItem('theme')
+    this.isDark = storedTheme !== null 
+      ? storedTheme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches
     this.#render()
   }
 } 

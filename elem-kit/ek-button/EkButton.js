@@ -1,9 +1,10 @@
 import { linkCss } from '../ek-support.js'
+import '../ek-icon.js'
 
 // Button Web Component - Customizable button with icon support and loading states
 export class EkButton extends HTMLElement {
   static elemName = 'ek-button'
-  static observedAttributes = ['variant', 'size', 'icon', 'icon-position', 'loading', 'disabled', 'onclick']
+  static observedAttributes = ['variant', 'size', 'icon', 'icon-position', 'loading', 'disabled', 'onclick', 'icon-only']
 
   constructor() {
     super()
@@ -16,6 +17,9 @@ export class EkButton extends HTMLElement {
   
   get loading() { return this.hasAttribute('loading') }
   set loading(value) { this.toggleAttribute('loading', value) }
+
+  get iconOnly() { return this.hasAttribute('icon-only') }
+  set iconOnly(value) { this.toggleAttribute('icon-only', value) }
 
   #handleClick = (e) => {
     e.preventDefault()
@@ -35,19 +39,18 @@ export class EkButton extends HTMLElement {
 
   #render() {
     // Prepare icon states
-    const [iconStart, iconEnd] = [
-      this.getAttribute('icon') && this.getAttribute('icon-position') !== 'end',
-      this.getAttribute('icon') && this.getAttribute('icon-position') === 'end'
-    ]
-    const iconOnly = this.hasAttribute('icon-only')
+    const iconName = this.getAttribute('icon')
+    const iconPosition = this.getAttribute('icon-position')
     const size = this.getAttribute('size')
+    
+    const iconElement = iconName ? `<ek-icon name="${iconName}" size="${size}"></ek-icon>` : ''
 
-    // Build button content
+    // Build button content based on icon-only state
     const content = `
       <button ${this.disabled ? 'disabled' : ''}>
-        ${iconStart ? `<ek-icon name="${this.getAttribute('icon')}" size="${size}"></ek-icon>` : ''}
-        ${!iconOnly ? '<slot></slot>' : ''}
-        ${iconEnd ? `<ek-icon name="${this.getAttribute('icon')}" size="${size}"></ek-icon>` : ''}
+        ${iconPosition !== 'end' ? iconElement : ''}
+        ${this.iconOnly ? '' : '<slot></slot>'}
+        ${iconPosition === 'end' ? iconElement : ''}
         ${this.loading ? `<ek-icon name="arrow-clockwise" size="${size}"></ek-icon>` : ''}
       </button>
     `
@@ -57,12 +60,12 @@ export class EkButton extends HTMLElement {
   }
 
   // Lifecycle callbacks
-  connectedCallback() { this.#render() }
+  connectedCallback() { 
+    this.#render() 
+  }
   
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue || !this.isConnected) return
-    name === 'icon' 
-      ? this.shadowRoot.querySelector('ek-icon')?.setAttribute('name', newValue)
-      : this.#render()
+    this.#render()
   }
 }
