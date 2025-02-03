@@ -1,8 +1,9 @@
 /* Main CSS Entry Point */
 @import 'base/reset.css';
 @import 'base/html.css';
-@import 'base/main.css';
-@import 'base/footer.css';
 @import 'themes/colors.css';
 @import 'themes/sizes.css';
+
+@import 'main.css';
+@import 'footer.css';
 @import 'content.css';
