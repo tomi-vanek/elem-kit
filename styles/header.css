@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--header-bg-color);
+
+    margin: 0;
+    padding: var(--s-4) var(--s2);
+
+    z-index: 1;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shallow-shadow);
+}
+
+header nav ul {
+    display: flex;
+    gap: var(--s-4);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul a {
+    color: var(--text);
+    text-decoration: none;
+    padding: var(--s-4) var(--s-2);
+    font-size: var(--s0);
+    transition: color 0.2s ease;
+}
+
+header nav ul a:hover {
+    color: var(--accent);
+}

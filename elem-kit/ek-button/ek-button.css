@@ -1,4 +1,4 @@
-:host { display: inline-block }
+:host { display: block }
 
 button {
   border: none;
@@ -15,12 +15,16 @@ button {
 }
 
 /* Variants */
+:host([variant="text"]),
 :host([variant="text"]) button {
   --button-bg: transparent;
   --button-color: var(--accent);
-  padding: var(--s-4);
   min-inline-size: 0;
   box-shadow: none;
+}
+
+:host([variant="text"]) button {
+  padding: var(--s-4);
 }
 
 :host([variant="secondary"]) button {

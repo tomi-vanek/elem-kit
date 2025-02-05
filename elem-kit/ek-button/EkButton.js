@@ -66,6 +66,11 @@ export class EkButton extends HTMLElement {
   
   attributeChangedCallback(name, oldValue, newValue) {
     if (oldValue === newValue || !this.isConnected) return
-    this.#render()
+    if (name === 'icon' && oldValue && newValue) {
+      // Only update existing icon if we're changing from one icon to another
+      this.shadowRoot.querySelector('ek-icon')?.setAttribute('name', newValue)
+    } else {
+      this.#render()
+    }
   }
 }

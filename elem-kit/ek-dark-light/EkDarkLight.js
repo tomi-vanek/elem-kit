@@ -10,10 +10,18 @@ export class EkDarkLight extends HTMLElement {
 
   // Theme state management
   get isDark() { return this.getAttribute('theme') === 'dark' }
+
   set isDark(value) {
+    // const currentTheme = this.isDark ? 'dark' : 'light'
+    const nextTheme = value ? 'dark' : 'light'
+
+    // if (currentTheme === nextTheme) return
+
+    this.setAttribute('theme', nextTheme)
+    localStorage.setItem('theme', nextTheme)
+    // document.documentElement.classList.replace(`${currentTheme}-theme`, `${nextTheme}-theme`)
+
     document.documentElement.classList.toggle('dark-theme', value)
-    this.setAttribute('theme', value ? 'dark' : 'light')
-    localStorage.setItem('theme', value ? 'dark' : 'light')
   }
 
   #handleClick = (e) => {

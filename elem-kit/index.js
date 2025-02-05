@@ -1,5 +1,3 @@
-import '../app/app-nav.js'
-import '../app/app-header.js'
 import './ek-button.js'
 import './ek-icon.js'
 import './ek-dark-light.js'

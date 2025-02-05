@@ -24,6 +24,8 @@
   --s4: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
   --s5: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
   --s6: calc(var(--s0) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier) * var(--s-multiplier));
+
+  --shallow-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 /* Screen size adjustments */
