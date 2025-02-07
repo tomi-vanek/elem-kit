@@ -17,10 +17,67 @@ export default {
     docs: {
       description: {
         component: `
-A theme switcher component that toggles between light and dark modes.
-- Persists theme preference in localStorage
-- Syncs with system theme preference by default
-- Toggles a global CSS class for theme switching
+# EkDarkLight Component
+
+A simple and elegant dark/light theme toggle component that persists user preferences.
+
+## Features
+
+- 🌓 Toggles between dark and light themes
+- 💾 Persists theme preference in localStorage
+- 🎨 Automatically detects system color scheme preference
+- 🔄 Seamlessly switches theme across the entire application
+
+## Installation
+
+\`\`\`bash
+npm install elem-kit
+\`\`\`
+
+## Basic Usage
+
+\`\`\`html
+<ek-dark-light></ek-dark-light>
+\`\`\`
+
+The component renders as a button with a sun/moon icon that toggles between themes.
+
+## Behavior
+
+The component manages theme switching with the following logic:
+
+- Clicking the button toggles between dark and light themes
+- Theme preference is automatically stored in localStorage
+- On initial load, the component:
+  1. Checks for previously stored theme preference
+  2. Falls back to system color scheme preference if no stored preference exists
+
+## Technical Details
+
+### CSS Integration
+
+- Adds/removes \`.dark-theme\` class on the \`documentElement\` (html tag)
+- Uses Shadow DOM for style encapsulation
+- Inherits styles from the \`ek-button\` component
+
+### Events
+
+The component internally handles:
+
+- Click events for theme toggling
+- System theme preference changes
+- Local storage synchronization
+
+### Dependencies
+
+- \`ek-button\` - For the toggle button interface
+- \`ek-support.js\` - For CSS linking functionality
+
+### Browser Support
+
+- All modern browsers
+- Requires JavaScript enabled
+- Uses standard Web Components APIs
         `
       }
     }

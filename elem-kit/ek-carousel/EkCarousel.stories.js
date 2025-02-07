@@ -30,15 +30,65 @@ export default {
     docs: {
       description: {
         component: `
-A responsive carousel component that automatically adjusts to show the maximum number of items that fit the viewport.
+# EkCarousel
 
-Features:
-- Auto-adjusts to show maximum items that fit viewport
-- Smooth transitions and touch gestures (swipe left/right)
-- Smart navigation buttons that show/hide based on content
-- Maintains consistent gaps between items
-- Handles items with varying widths
-- Supports left/center/right alignment when content fits
+A modern, responsive carousel web component that automatically adapts to show the maximum number of items that fit the viewport.
+
+## Installation
+
+This component is part of the elem-kit package. Install the package using:
+
+\`\`\`bash
+npm install elem-kit
+\`\`\`
+
+## Import
+
+\`\`\`js
+// Import all components
+import 'elem-kit/index.js'
+
+// Import only this component
+import 'elem-kit/ek-carousel.js'
+\`\`\`
+
+## Features
+
+- 🔄 Responsive design - automatically adjusts to viewport width
+- 🎯 Smart item display - shows maximum items that fit the container
+- 🎭 Smooth transitions and animations
+- 📱 Touch gestures support (swipe left/right)
+- 🎮 Intelligent navigation buttons that show/hide based on content
+- 🎨 Configurable content alignment
+- 📐 Consistent gaps between items
+- 📏 Handles items with varying widths
+
+## Technical Details
+
+### Automatic Responsiveness
+
+- Dynamically calculates how many items can fit in the viewport
+- Adjusts layout on window resize
+- Maintains consistent spacing between items
+
+### Navigation
+
+- Smart navigation buttons appear only when needed
+- Previous button shows when scrolled away from start
+- Next button shows when more items are available
+- Smooth scrolling between item groups
+
+### Touch Support
+
+- Swipe left/right on touch devices
+- Gesture detection with proper threshold
+- Prevents vertical scroll interference during horizontal swipes
+
+### Layout Control
+
+- Configurable content alignment for non-overflowing content
+- Consistent gap maintenance between items
+- Handles varying item widths gracefully
         `
       }
     }

@@ -11,6 +11,65 @@ export default {
   component: 'ek-icon',
   tags: ['autodocs'],
   
+  parameters: {
+    docs: {
+      description: {
+        component: `
+# EkIcon
+
+A lightweight web component for displaying SVG icons from the Bootstrap Icons library with caching support.
+
+## Installation
+
+This component is part of the elem-kit package. Install the package using:
+
+\`\`\`bash
+npm install elem-kit bootstrap-icons
+\`\`\`
+
+## Import
+
+\`\`\`js
+// Import all components
+import 'elem-kit/index.js'
+
+// Import only this component
+import 'elem-kit/ek-icon.js'
+\`\`\`
+
+## Features
+
+- 🖼️ Uses Bootstrap Icons library
+- 💾 Local storage caching for better performance
+- 📏 Multiple size options (small, default, large)
+- 🎨 Inherits color from parent element
+- 🔄 Automatic loading state
+- 🎯 Accessible and screen-reader friendly
+- 🖌️ Customizable via CSS variables
+- 💫 Smooth rendering and transitions
+
+## Technical Details
+
+### Styling
+
+The icon inherits its color from the parent element's \`color\` property and can be sized using:
+
+- Default sizing through font-size inheritance
+- Predefined sizes via the \`size\` attribute
+- Custom sizing through CSS variables
+
+### Performance
+
+- Icons are cached in localStorage after first load
+- Automatic loading state while fetching icons
+- Efficient SVG rendering and scaling
+
+For more icons, visit [Bootstrap Icons](https://icons.getbootstrap.com/).
+`
+      }
+    }
+  },
+  
   // Define arguments that can be configured in Storybook UI
   argTypes: {
     name: {

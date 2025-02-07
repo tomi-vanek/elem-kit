@@ -7,16 +7,60 @@ export default {
     docs: {
       description: {
         component: `
-## EK Button Component
+# EkButton
 
-A versatile button component that supports multiple variants, sizes, icons, and states.
+A modern, customizable button web component with support for icons, loading states, and multiple variants.
 
-### Features
-- Three variants: default (primary), secondary, and text
-- Three sizes: default, small, and large
-- Icon support with flexible positioning
-- Loading and disabled states
-- Icon-only mode for circular buttons
+## Installation
+
+This component is part of the elem-kit package. Install the package using:
+
+\`\`\`bash
+npm install elem-kit
+\`\`\`
+
+## Import
+
+\`\`\`js
+// Import all components
+import 'elem-kit/index.js'
+
+// Import only this component
+import 'elem-kit/ek-button.js'
+\`\`\`
+
+## Features
+
+- 🎨 Multiple variants (primary, secondary, text)
+- 📏 Different sizes (small, default, large)
+- 🖼️ Icon support with flexible positioning
+- 💫 Loading state with spinner animation
+- ⚡️ Click event handling with disabled state support
+- 🎭 Smooth hover and active animations
+- 🎯 Accessible and keyboard-friendly
+- 🖌️ Customizable via CSS variables
+
+## Technical Details
+
+### Styling
+
+The button uses CSS custom properties for theming:
+
+- \`--button-bg\`: Background color (defaults to \`--accent\`)
+- \`--button-color\`: Text color (defaults to \`--bg\`)
+- \`--button-padding\`: Custom padding
+
+### States
+
+- **Hover**: Slight brightness increase
+- **Active**: Scale down and shadow removal
+- **Loading**: Opacity reduction and spinner display
+- **Disabled**: Reduced opacity and pointer-events disabled
+
+### Events
+
+- \`click\`: Fired when the button is clicked (unless disabled or loading)
+- Event bubbles and is composed (crosses shadow DOM boundary)
         `,
       },
     },
