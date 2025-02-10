@@ -1,0 +1,42 @@
+/* Color Themes */
+:host {
+  /* Light theme */
+  --_ek_bg: var(--ek-bg-light, #fefefe);
+  --_ek_text: var(--ek-text-light, #212529);
+  --_ek_accent: var(--ek-accent-light, #0d6efd);
+  --_ek_border: var(--ek-border-light, #dee2e6);
+  --_ek_bg-primary: var(--ek-bg-primary-light, #ffffff);
+  --_ek_bg-secondary: var(--ek-bg-secondary-light, #f8f9fa);
+  --_ek_text-primary: var(--ek-text-primary-light, #212529);
+  --_ek_text-secondary: var(--ek-text-secondary-light, #6c757d);
+  --_ek_nav-bg: var(--ek-nav-bg-light, rgba(255, 255, 255, 0.95));
+  --_ek_shadow-color: var(--ek-shadow-color-light, rgba(0, 0, 0, 0.1));
+  
+  /* Additional semantic colors */
+  --_ek_success: var(--ek-success, #198754);
+  --_ek_warning: var(--ek-warning, #ffc107);
+  --_ek_error: var(--ek-error, #dc3545);
+  --_ek_info: var(--ek-info, #0dcaf0);
+  
+  /* Additional semantic colors */
+  --_ek_success: #198754;
+  --_ek_warning: #ffc107;
+  --_ek_error: #dc3545;
+  --_ek_info: #0dcaf0;
+
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dark theme */
+:host-context(:root.dark-theme) {
+  --_ek_bg: var(--ek-bg-dark, #212529); 
+  --_ek_text: var(--ek-text-dark, #f8f9fa);
+  --_ek_accent: var(--ek-accent-dark, #3d8bfd);
+  --_ek_border: var(--ek-border-dark, #495057);
+  --_ek_bg-primary: var(--ek-bg-primary-dark, #212529);
+  --_ek_bg-secondary: var(--ek-bg-secondary-dark, #343a40);
+  --_ek_text-primary: var(--ek-text-primary-dark, #f8f9fa);
+  --_ek_text-secondary: var(--ek-text-secondary-dark, #adb5bd);
+  --_ek_nav-bg: var(--ek-nav-bg-dark, rgba(33, 37, 41, 0.95));
+  --_ek_shadow-color: var(--ek-shadow-color-dark, rgba(0, 0, 0, 0.2));
+} 

@@ -1,0 +1,48 @@
+/* Base sizes with single multiplier */
+:host {
+  /* Base multiplier 1.2 */
+  --_ek_s-multiplier: var(--ek-s-multiplier, 1.2);
+  
+  /* Fluid base size scaling with viewport width
+     - Minimum: 14px (0.875rem) at 320px viewport
+     - Maximum: 18px (1.125rem) at 1920px viewport
+     - Scales fluidly between these points */
+  --_ek_s-min: var(--ek-s-min, 0.875rem);
+  --_ek_s-max: var(--ek-s-max, 1.125rem);
+  --_ek_s0: clamp(var(--_ek_s-min), var(--_ek_s-min) + 0.375vw, var(--_ek_s-max));
+  
+  /* Smaller sizes - each is previous size divided by multiplier */
+  --_ek_s-1: calc(var(--_ek_s0) / var(--_ek_s-multiplier));
+  --_ek_s-2: calc(var(--_ek_s-1) / var(--_ek_s-multiplier));
+  --_ek_s-3: calc(var(--_ek_s-2) / var(--_ek_s-multiplier));
+  --_ek_s-4: calc(var(--_ek_s-3) / var(--_ek_s-multiplier));
+  --_ek_s-5: calc(var(--_ek_s-4) / var(--_ek_s-multiplier));
+  --_ek_s-6: calc(var(--_ek_s-5) / var(--_ek_s-multiplier));
+  
+  /* Larger sizes - each is previous size multiplied by multiplier */
+  --_ek_s1: calc(var(--_ek_s0) * var(--_ek_s-multiplier));
+  --_ek_s2: calc(var(--_ek_s1) * var(--_ek_s-multiplier));
+  --_ek_s3: calc(var(--_ek_s2) * var(--_ek_s-multiplier));
+  --_ek_s4: calc(var(--_ek_s3) * var(--_ek_s-multiplier));
+  --_ek_s5: calc(var(--_ek_s4) * var(--_ek_s-multiplier));
+  --_ek_s6: calc(var(--_ek_s5) * var(--_ek_s-multiplier));
+
+  --_ek_shallow-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* Screen size adjustments */
+@media (max-width: 768px) {
+  :host { --_ek_s0: 0.9375rem; } /* 15px */
+}
+
+@media (max-width: 480px) {
+  :host { --_ek_s0: 0.875rem; }  /* 14px */
+}
+
+@media (min-width: 1200px) {
+  :host { --_ek_s0: 1.0625rem; } /* 17px */
+}
+
+@media (min-width: 1600px) {
+  :host { --_ek_s0: 1.125rem; }  /* 18px */
+} 

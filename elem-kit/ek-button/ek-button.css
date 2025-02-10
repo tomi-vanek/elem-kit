@@ -1,15 +1,22 @@
-:host { display: block }
+:host {
+  display: block;
+  --_ek_button-bg: var(--ek-button-bg, var(--_ek_accent));
+  --_ek_button-color: var(--ek-button-color, var(--_ek_bg));
+  --_ek_button-padding: var(--ek-button-padding, calc(var(--_ek_s0) / 2) var(--_ek_s0));
+}
 
-button {
+:host button {
   border: none;
   cursor: pointer;
-  font-size: var(--s0);
+  font-size: var(--_ek_s0);
   border-radius: 9999px;
-  background: var(--button-bg, var(--accent));
-  color: var(--button-color, var(--bg));
+
+  background: var(--_ek_button-bg);
+  color: var(--_ek_button-color);
+
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.7);
   transition: all 0.1s ease;
-  padding: var(--button-padding, var(--s-2) var(--s0));
+  padding: var(--_ek_button-padding);
   min-inline-size: 10ch;
   text-align: center;
 }
@@ -17,32 +24,34 @@ button {
 /* Variants */
 :host([variant="text"]),
 :host([variant="text"]) button {
-  --button-bg: transparent;
-  --button-color: var(--accent);
+  background: transparent;
+  color: var(--_ek_accent);
+
   min-inline-size: 0;
   box-shadow: none;
 }
 
 :host([variant="text"]) button {
-  padding: var(--s-4);
+  padding: var(--_ek_s-4);
 }
 
 :host([variant="secondary"]) button {
-  --button-bg: var(--bg);
-  --button-color: var(--accent);
-  box-shadow: inset 0 0 0 1px var(--accent), 0 2px 7px rgba(0, 0, 0, 0.7);
+  --_ek_button-bg: var(--_ek_bg);
+  --_ek_button-color: var(--_ek_accent);
+  box-shadow: inset 0 0 0 1px var(--_ek_accent), 0 2px 7px rgba(0, 0, 0, 0.7);
 }
 
 /* Icon handling */
-button:has(ek-icon) {
+:host button:has(ek-icon) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--s-4);
+  gap: var(--_ek_s-4);
 }
 
 :host([icon-only]) button {
-  padding: var(--s-2);
+  padding: var(--_ek_s-2);
+
   min-inline-size: 0;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -51,13 +60,13 @@ button:has(ek-icon) {
 :host([icon-position="end"]) button { flex-direction: row-reverse }
 
 /* Sizes */
-:host([size="small"]) button { font-size: var(--s-1) }
-:host([size="large"]) button { font-size: var(--s1) }
+:host([size="small"]) button { font-size: var(--_ek_s-1) }
+:host([size="large"]) button { font-size: var(--_ek_s1) }
 
 /* States */
-button:hover { filter: brightness(1.1) }
+:host button:hover { filter: brightness(1.1) }
 
-button:active,
+:host button:active,
 :host([variant="secondary"]) button:active {
   transform: translateY(1px) scale(0.99);
   filter: brightness(0.9);
