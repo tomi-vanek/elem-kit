@@ -190,7 +190,7 @@ WithStartIcon.args = {
 export const WithEndIcon = Template.bind({});
 WithEndIcon.args = {
   icon: 'arrow-right',
-  iconPosition: 'end',
+  'icon-position': 'end',
   label: 'Next',
 };
 

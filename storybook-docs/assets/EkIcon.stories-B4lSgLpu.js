@@ -1,4 +1,4 @@
-import{E as o}from"./EkIcon-CkJlZoQ0.js";customElements.get(o.elemName)||customElements.define(o.elemName,o);const z={title:"Elements/ek-icon",component:"ek-icon",tags:["autodocs"],parameters:{docs:{description:{component:`
+import{E as o}from"./EkIcon-Bitc-VNF.js";customElements.get(o.elemName)||customElements.define(o.elemName,o);const z={title:"Elements/ek-icon",component:"ek-icon",tags:["autodocs"],parameters:{docs:{description:{component:`
 # EkIcon
 
 A lightweight web component for displaying SVG icons from the Bootstrap Icons library with caching support.

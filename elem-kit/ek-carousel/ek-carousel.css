@@ -1,77 +1,82 @@
 :host {
+  --_ek_carousel-bg: var(--ek-carousel-bg, var(--_ek_text-secondary));
+}
+
+:host {
   display: block;
   position: relative;
   width: 100%;
-  border-radius: var(--s-5);
+  border-radius: var(--_ek_s-5);
 }
 
-.carousel {
+:host .carousel {
   position: relative;
   display: flex;
   align-items: center;
   border-radius: 5px;
 }
 
-.carousel-inner {
+:host .carousel-inner {
   overflow: hidden;
   width: 100%;
   transition: margin 0.3s ease;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--_ek_border);
   padding: 2px;
   position: relative;
+  background-color: var(--_ek_carousel-bg);
 }
 
 /* Navigation button wrappers */
-.nav-button-wrapper {
+:host .nav-button-wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: var(--s6);
-  height: var(--s6);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: fit-content;
+  height: fit-content;
+  margin: var(--_ek_s-5);
   transition: all 0.3s ease;
   z-index: 1;
 }
 
-.nav-button-wrapper:first-child {
+:host .nav-button-wrapper:first-child {
   left: 0;
 }
 
-.nav-button-wrapper:last-child {
+:host .nav-button-wrapper:last-child {
   right: 0;
 }
 
-.nav-button-wrapper:not(.visible) {
+:host .nav-button-wrapper:not(.visible) {
   opacity: 0;
   visibility: hidden;
 }
 
 /* Navigation buttons */
-ek-button[data-nav] {
+:host ek-button[data-nav] {
   transform: scale(0);
   opacity: 0;
   transition: all 0.3s ease;
-  width: var(--s6);
   aspect-ratio: 1;
   border-radius: 50%;
   padding: 0;
 }
 
-ek-button[data-nav].visible {
+:host ek-button[data-nav].visible {
   transform: scale(1);
   opacity: 1;
 }
 
 /* Show items in a row */
-::slotted(*) {
+:host ::slotted(*) {
   flex-shrink: 0;
-  margin-right: var(--s0);
+  margin-right: var(--_ek_s0);
 }
 
 /* Container for items */
-slot {
+:host slot {
   display: flex;
   gap: 10px;
   transition: transform 0.3s ease;

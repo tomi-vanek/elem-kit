@@ -40,17 +40,16 @@ export class EkButton extends HTMLElement {
   #render() {
     // Prepare icon states
     const iconName = this.getAttribute('icon')
-    const iconPosition = this.getAttribute('icon-position')
     const size = this.getAttribute('size')
     
     const iconElement = iconName ? `<ek-icon name="${iconName}" size="${size}"></ek-icon>` : ''
+    const slotElement = this.iconOnly ? '' : '<slot></slot>'
 
-    // Build button content based on icon-only state
+    // Build button content - order is controlled by CSS
     const content = `
       <button ${this.disabled ? 'disabled' : ''}>
-        ${iconPosition !== 'end' ? iconElement : ''}
-        ${this.iconOnly ? '' : '<slot></slot>'}
-        ${iconPosition === 'end' ? iconElement : ''}
+        ${iconElement}
+        ${slotElement}
         ${this.loading ? `<ek-icon name="arrow-clockwise" size="${size}"></ek-icon>` : ''}
       </button>
     `

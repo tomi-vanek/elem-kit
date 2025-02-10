@@ -1,8 +1,15 @@
 :host {
-  display: block;
   --_ek_button-bg: var(--ek-button-bg, var(--_ek_accent));
   --_ek_button-color: var(--ek-button-color, var(--_ek_bg));
   --_ek_button-padding: var(--ek-button-padding, calc(var(--_ek_s0) / 2) var(--_ek_s0));
+}
+
+:host {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
 }
 
 :host button {
@@ -10,23 +17,38 @@
   cursor: pointer;
   font-size: var(--_ek_s0);
   border-radius: 9999px;
-
   background: var(--_ek_button-bg);
   color: var(--_ek_button-color);
-
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.7);
   transition: all 0.1s ease;
   padding: var(--_ek_button-padding);
+  margin: auto;
   min-inline-size: 10ch;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--_ek_s-4);
+}
+
+/* Icon and slot positioning */
+:host button ek-icon {
+  order: 0;
+}
+
+:host button slot {
+  order: 1;
+}
+
+:host([icon-position="end"]) button ek-icon {
+  order: 2;
 }
 
 /* Variants */
 :host([variant="text"]),
 :host([variant="text"]) button {
   background: transparent;
-  color: var(--_ek_accent);
-
+  color: var(--_ek_text);
   min-inline-size: 0;
   box-shadow: none;
 }
@@ -37,27 +59,22 @@
 
 :host([variant="secondary"]) button {
   --_ek_button-bg: var(--_ek_bg);
-  --_ek_button-color: var(--_ek_accent);
+  --_ek_button-color: var(--_ek_text);
   box-shadow: inset 0 0 0 1px var(--_ek_accent), 0 2px 7px rgba(0, 0, 0, 0.7);
 }
 
-/* Icon handling */
-:host button:has(ek-icon) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--_ek_s-4);
-}
-
+/* Icon only buttons */
 :host([icon-only]) button {
   padding: var(--_ek_s-2);
-
   min-inline-size: 0;
   aspect-ratio: 1;
   border-radius: 50%;
 }
 
-:host([icon-position="end"]) button { flex-direction: row-reverse }
+/* Loading icon always at the end */
+:host button ek-icon[name="arrow-clockwise"] {
+  order: 3;
+}
 
 /* Sizes */
 :host([size="small"]) button { font-size: var(--_ek_s-1) }
