@@ -1,10 +1,9 @@
 {
-  "name": "fold-comp",
+  "name": "elem-kit",
   "version": "1.0.0",
-  "description": "Modern, lightweight web components library",
+  "description": "Lightweight web components library",
   "author": "Tomi Vanek",
   "license": "MIT",
-  "main": "index.js",
   "scripts": {
     "start": "web-dev-server --node-resolve --open --watch",
     "test": "web-test-runner elem-kit/**/*.test.js --node-resolve",

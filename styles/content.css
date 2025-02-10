@@ -14,11 +14,12 @@ ek-carousel > div {
     font-size: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     font-weight: 500;
     position: relative;
     overflow: hidden;
+
+    transition: transform 0.3s ease;
 }
 
 ek-carousel > div:hover {
@@ -89,4 +90,5 @@ ek-carousel > div:hover {
     display: flex;
     gap: 10px;
     justify-content: flex-start;
+    align-items: center;
 } 

@@ -11,12 +11,12 @@
 
 /* Core styles */
 svg {
+  display: block;
   width: 100%;
   height: 100%;
   fill: currentColor;
-  display: block;
 }
 
 /* Sizes */
-:host([size="small"]) { font-size: var(--s-1) }
-:host([size="large"]) { font-size: var(--s1) } 
+:host([size="small"]) { font-size: var(--_ek_s-1) }
+:host([size="large"]) { font-size: var(--_ek_s1) } 

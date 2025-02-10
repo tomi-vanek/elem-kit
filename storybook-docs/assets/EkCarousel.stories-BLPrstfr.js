@@ -1,4 +1,4 @@
-var ce=Object.defineProperty;var D=t=>{throw TypeError(t)};var de=(t,i,e)=>i in t?ce(t,i,{enumerable:!0,configurable:!0,writable:!0,value:e}):t[i]=e;var N=(t,i,e)=>de(t,typeof i!="symbol"?i+"":i,e),I=(t,i,e)=>i.has(t)||D("Cannot "+e);var a=(t,i,e)=>(I(t,i,"read from private field"),e?e.call(t):i.get(t)),p=(t,i,e)=>i.has(t)?D("Cannot add the same private member more than once"):i instanceof WeakSet?i.add(t):i.set(t,e),v=(t,i,e,r)=>(I(t,i,"write to private field"),r?r.call(t,e):i.set(t,e),e),f=(t,i,e)=>(I(t,i,"access private method"),e);import{l as he}from"./EkIcon-CkJlZoQ0.js";import{E as q}from"./EkButton-3GWYNygD.js";var u,g,d,$,y,A,T,h,W,S,le;const n=class n extends HTMLElement{constructor(){super();p(this,h);p(this,u,0);p(this,g,0);p(this,d,[]);p(this,$,10);p(this,y,!1);p(this,A,e=>{var o,s;const r=(o=this.shadowRoot.querySelector("slot"))==null?void 0:o.assignedElements();if(r!=null&&r.length){if(e>0)if(r.length-(a(this,u)+a(this,g))<a(this,g)){let c=0;for(let m=r.length-1;m>=0;m--)if(c+=a(this,d)[m],c>((s=this.shadowRoot.querySelector(".carousel-inner"))==null?void 0:s.offsetWidth)){v(this,u,Math.max(0,m+1));break}}else v(this,u,a(this,u)+a(this,g));else v(this,u,Math.max(0,a(this,u)-a(this,g)));f(this,h,S).call(this)}});p(this,T,()=>{const e=this.shadowRoot.querySelector(".carousel-inner");if(!e)return;let r=0,o=0;e.addEventListener("touchstart",s=>{r=s.touches[0].clientX,o=s.touches[0].clientY,v(this,y,!1)},{passive:!0}),e.addEventListener("touchmove",s=>{if(!a(this,y)){const[l,c]=[Math.abs(s.touches[0].clientX-r),Math.abs(s.touches[0].clientY-o)];l>c&&l>10&&(v(this,y,!0),s.preventDefault())}},{passive:!1}),e.addEventListener("touchend",s=>{if(a(this,y)&&Math.abs(s.changedTouches[0].clientX-r)>=50){const l=r>s.changedTouches[0].clientX?n.NAV.NEXT.direction:n.NAV.PREV.direction;a(this,A).call(this,l)}},{passive:!0})});this.attachShadow({mode:"open"})}connectedCallback(){f(this,h,le).call(this);let e;window.addEventListener("resize",()=>{clearTimeout(e),e=setTimeout(()=>f(this,h,W).call(this),200)})}attributeChangedCallback(e,r,o){r===o||!this.isConnected||f(this,h,S).call(this)}};u=new WeakMap,g=new WeakMap,d=new WeakMap,$=new WeakMap,y=new WeakMap,A=new WeakMap,T=new WeakMap,h=new WeakSet,W=function(){var c;const e=(c=this.shadowRoot.querySelector("slot"))==null?void 0:c.assignedElements(),r=this.shadowRoot.querySelector(".carousel-inner");if(!(e!=null&&e.length)||!r)return;v(this,d,e.map(m=>m.offsetWidth+a(this,$))),a(this,d)[a(this,d).length-1]-=a(this,$);const o=r.offsetWidth;let s=0,l=0;for(const m of a(this,d)){if(s+=m,s>o)break;l++}v(this,g,l),f(this,h,S).call(this)},S=function(){var C,M,B,z,F,Y,H,O;const[e,r]=[this.shadowRoot.querySelector("slot"),this.shadowRoot.querySelector(".carousel-inner")];if(!e||!r||!a(this,d).length)return;const o={[n.NAV.PREV.key]:{button:this.shadowRoot.querySelector(`[data-nav="${n.NAV.PREV.key}"]`),wrapper:(C=this.shadowRoot.querySelector(`[data-nav="${n.NAV.PREV.key}"]`))==null?void 0:C.parentElement},[n.NAV.NEXT.key]:{button:this.shadowRoot.querySelector(`[data-nav="${n.NAV.NEXT.key}"]`),wrapper:(M=this.shadowRoot.querySelector(`[data-nav="${n.NAV.NEXT.key}"]`))==null?void 0:M.parentElement}},[s,l]=[a(this,d).reduce((x,k)=>x+k,0),r.offsetWidth];if(s<=l){const x=this.getAttribute("align")||"left",k=x==="right"?-(s-l):x==="center"?-(s-l)/2:0;e.style.transform=`translateX(${k}px)`,v(this,u,0),Object.values(o).forEach(({button:X,wrapper:L})=>{X==null||X.classList.remove("visible"),L==null||L.classList.remove("visible")});return}const c=-a(this,d).slice(0,a(this,u)).reduce((x,k)=>x+k,0);s+c<=l+1?((B=o[n.NAV.NEXT.key].button)==null||B.classList.remove("visible"),(z=o[n.NAV.NEXT.key].wrapper)==null||z.classList.remove("visible"),e.style.transform=`translateX(${-(s-l)}px)`):((F=o[n.NAV.NEXT.key].button)==null||F.classList.add("visible"),(Y=o[n.NAV.NEXT.key].wrapper)==null||Y.classList.add("visible"),e.style.transform=`translateX(${c}px)`);const P=c<0;(H=o[n.NAV.PREV.key].button)==null||H.classList.toggle("visible",P),(O=o[n.NAV.PREV.key].wrapper)==null||O.classList.toggle("visible",P)},le=function(){const e=`
+var ce=Object.defineProperty;var O=t=>{throw TypeError(t)};var de=(t,i,e)=>i in t?ce(t,i,{enumerable:!0,configurable:!0,writable:!0,value:e}):t[i]=e;var N=(t,i,e)=>de(t,typeof i!="symbol"?i+"":i,e),L=(t,i,e)=>i.has(t)||O("Cannot "+e);var r=(t,i,e)=>(L(t,i,"read from private field"),e?e.call(t):i.get(t)),p=(t,i,e)=>i.has(t)?O("Cannot add the same private member more than once"):i instanceof WeakSet?i.add(t):i.set(t,e),g=(t,i,e,a)=>(L(t,i,"write to private field"),a?a.call(t,e):i.set(t,e),e),f=(t,i,e)=>(L(t,i,"access private method"),e);import{l as he}from"./EkIcon-Bitc-VNF.js";import{E as C}from"./EkButton-CV6Wai5n.js";var u,v,d,$,y,A,T,h,q,S,le;const n=class n extends HTMLElement{constructor(){super();p(this,h);p(this,u,0);p(this,v,0);p(this,d,[]);p(this,$,10);p(this,y,!1);p(this,A,e=>{var o,s;const a=(o=this.shadowRoot.querySelector("slot"))==null?void 0:o.assignedElements();if(a!=null&&a.length){if(e>0)if(a.length-(r(this,u)+r(this,v))<r(this,v)){let c=0;for(let m=a.length-1;m>=0;m--)if(c+=r(this,d)[m],c>((s=this.shadowRoot.querySelector(".carousel-inner"))==null?void 0:s.offsetWidth)){g(this,u,Math.max(0,m+1));break}}else g(this,u,r(this,u)+r(this,v));else g(this,u,Math.max(0,r(this,u)-r(this,v)));f(this,h,S).call(this)}});p(this,T,()=>{const e=this.shadowRoot.querySelector(".carousel-inner");if(!e)return;let a=0,o=0;e.addEventListener("touchstart",s=>{a=s.touches[0].clientX,o=s.touches[0].clientY,g(this,y,!1)},{passive:!0}),e.addEventListener("touchmove",s=>{if(!r(this,y)){const[l,c]=[Math.abs(s.touches[0].clientX-a),Math.abs(s.touches[0].clientY-o)];l>c&&l>10&&(g(this,y,!0),s.preventDefault())}},{passive:!1}),e.addEventListener("touchend",s=>{if(r(this,y)&&Math.abs(s.changedTouches[0].clientX-a)>=50){const l=a>s.changedTouches[0].clientX?n.NAV.NEXT.direction:n.NAV.PREV.direction;r(this,A).call(this,l)}},{passive:!0})});this.attachShadow({mode:"open"})}connectedCallback(){f(this,h,le).call(this);let e;window.addEventListener("resize",()=>{clearTimeout(e),e=setTimeout(()=>f(this,h,q).call(this),200)})}attributeChangedCallback(e,a,o){a===o||!this.isConnected||f(this,h,S).call(this)}};u=new WeakMap,v=new WeakMap,d=new WeakMap,$=new WeakMap,y=new WeakMap,A=new WeakMap,T=new WeakMap,h=new WeakSet,q=function(){var c;const e=(c=this.shadowRoot.querySelector("slot"))==null?void 0:c.assignedElements(),a=this.shadowRoot.querySelector(".carousel-inner");if(!(e!=null&&e.length)||!a)return;g(this,d,e.map(m=>m.offsetWidth+r(this,$))),r(this,d)[r(this,d).length-1]-=r(this,$);const o=a.offsetWidth;let s=0,l=0;for(const m of r(this,d)){if(s+=m,s>o)break;l++}g(this,v,l),f(this,h,S).call(this)},S=function(){var W,M,z,B,F,H,Y,D;const[e,a]=[this.shadowRoot.querySelector("slot"),this.shadowRoot.querySelector(".carousel-inner")];if(!e||!a||!r(this,d).length)return;const o={[n.NAV.PREV.key]:{button:this.shadowRoot.querySelector(`[data-nav="${n.NAV.PREV.key}"]`),wrapper:(W=this.shadowRoot.querySelector(`[data-nav="${n.NAV.PREV.key}"]`))==null?void 0:W.parentElement},[n.NAV.NEXT.key]:{button:this.shadowRoot.querySelector(`[data-nav="${n.NAV.NEXT.key}"]`),wrapper:(M=this.shadowRoot.querySelector(`[data-nav="${n.NAV.NEXT.key}"]`))==null?void 0:M.parentElement}},[s,l]=[r(this,d).reduce((x,w)=>x+w,0),a.offsetWidth];if(s<=l){const x=this.getAttribute("align")||"left",w=x==="right"?-(s-l):x==="center"?-(s-l)/2:0;e.style.transform=`translateX(${w}px)`,g(this,u,0),Object.values(o).forEach(({button:I,wrapper:X})=>{I==null||I.classList.remove("visible"),X==null||X.classList.remove("visible")});return}const c=-r(this,d).slice(0,r(this,u)).reduce((x,w)=>x+w,0);s+c<=l+1?((z=o[n.NAV.NEXT.key].button)==null||z.classList.remove("visible"),(B=o[n.NAV.NEXT.key].wrapper)==null||B.classList.remove("visible"),e.style.transform=`translateX(${-(s-l)}px)`):((F=o[n.NAV.NEXT.key].button)==null||F.classList.add("visible"),(H=o[n.NAV.NEXT.key].wrapper)==null||H.classList.add("visible"),e.style.transform=`translateX(${c}px)`);const P=c<0;(Y=o[n.NAV.PREV.key].button)==null||Y.classList.toggle("visible",P),(D=o[n.NAV.PREV.key].wrapper)==null||D.classList.toggle("visible",P)},le=function(){const e=`
       <div class="carousel">
         <div class="nav-button-wrapper">
           <ek-button data-nav="${n.NAV.PREV.key}" icon="${n.NAV.PREV.icon}" icon-only variant="secondary"></ek-button>
@@ -8,16 +8,66 @@ var ce=Object.defineProperty;var D=t=>{throw TypeError(t)};var de=(t,i,e)=>i in 
           <ek-button data-nav="${n.NAV.NEXT.key}" icon="${n.NAV.NEXT.icon}" icon-only variant="secondary"></ek-button>
         </div>
       </div>
-    `;this.shadowRoot.innerHTML=he(import.meta.url,n.elemName)+e,Object.values(n.NAV).forEach(({key:r,direction:o})=>{var s;(s=this.shadowRoot.querySelector(`[data-nav="${r}"]`))==null||s.addEventListener("click",()=>a(this,A).call(this,o))}),a(this,T).call(this),requestAnimationFrame(()=>f(this,h,W).call(this))},N(n,"elemName","ek-carousel"),N(n,"observedAttributes",["align"]),N(n,"NAV",{PREV:{key:"prev",icon:"chevron-left",direction:-1},NEXT:{key:"next",icon:"chevron-right",direction:1}});let w=n;customElements.get(w.elemName)||customElements.define(w.elemName,w);customElements.get(q.elemName)||customElements.define(q.elemName,q);const ge={title:"Elements/ek-carousel",component:"ek-carousel",tags:["autodocs"],argTypes:{align:{control:"select",options:["left","center","right"],description:"Alignment of items when they don't overflow",table:{type:{summary:"string"},defaultValue:{summary:"left"}}}},parameters:{docs:{description:{component:`
-A responsive carousel component that automatically adjusts to show the maximum number of items that fit the viewport.
+    `;this.shadowRoot.innerHTML=he(import.meta.url,n.elemName)+e,Object.values(n.NAV).forEach(({key:a,direction:o})=>{var s;(s=this.shadowRoot.querySelector(`[data-nav="${a}"]`))==null||s.addEventListener("click",()=>r(this,A).call(this,o))}),r(this,T).call(this),requestAnimationFrame(()=>f(this,h,q).call(this))},N(n,"elemName","ek-carousel"),N(n,"observedAttributes",["align"]),N(n,"NAV",{PREV:{key:"prev",icon:"chevron-left",direction:-1},NEXT:{key:"next",icon:"chevron-right",direction:1}});let k=n;customElements.get(k.elemName)||customElements.define(k.elemName,k);customElements.get(C.elemName)||customElements.define(C.elemName,C);const ve={title:"Elements/ek-carousel",component:"ek-carousel",tags:["autodocs"],argTypes:{align:{control:"select",options:["left","center","right"],description:"Alignment of items when they don't overflow",table:{type:{summary:"string"},defaultValue:{summary:"left"}}}},parameters:{docs:{description:{component:`
+# EkCarousel
 
-Features:
-- Auto-adjusts to show maximum items that fit viewport
-- Smooth transitions and touch gestures (swipe left/right)
-- Smart navigation buttons that show/hide based on content
-- Maintains consistent gaps between items
-- Handles items with varying widths
-- Supports left/center/right alignment when content fits
+A modern, responsive carousel web component that automatically adapts to show the maximum number of items that fit the viewport.
+
+## Installation
+
+This component is part of the elem-kit package. Install the package using:
+
+\`\`\`bash
+npm install elem-kit
+\`\`\`
+
+## Import
+
+\`\`\`js
+// Import all components
+import 'elem-kit/index.js'
+
+// Import only this component
+import 'elem-kit/ek-carousel.js'
+\`\`\`
+
+## Features
+
+- 🔄 Responsive design - automatically adjusts to viewport width
+- 🎯 Smart item display - shows maximum items that fit the container
+- 🎭 Smooth transitions and animations
+- 📱 Touch gestures support (swipe left/right)
+- 🎮 Intelligent navigation buttons that show/hide based on content
+- 🎨 Configurable content alignment
+- 📐 Consistent gaps between items
+- 📏 Handles items with varying widths
+
+## Technical Details
+
+### Automatic Responsiveness
+
+- Dynamically calculates how many items can fit in the viewport
+- Adjusts layout on window resize
+- Maintains consistent spacing between items
+
+### Navigation
+
+- Smart navigation buttons appear only when needed
+- Previous button shows when scrolled away from start
+- Next button shows when more items are available
+- Smooth scrolling between item groups
+
+### Touch Support
+
+- Swipe left/right on touch devices
+- Gesture detection with proper threshold
+- Prevents vertical scroll interference during horizontal swipes
+
+### Layout Control
+
+- Configurable content alignment for non-overflowing content
+- Consistent gap maintenance between items
+- Handles varying item widths gracefully
         `}}}},ue=({align:t})=>`
   <ek-carousel ${t?`align="${t}"`:""}>
     ${Array(6).fill(0).map((i,e)=>`
@@ -87,7 +137,7 @@ Features:
       </div>
     `).join("")}
   </ek-carousel>
-`,V=()=>`
+`,R=()=>`
   <div>
     <p style="margin-bottom: 1rem;">Resize the window to see how the carousel adapts:</p>
     <ek-carousel>
@@ -107,7 +157,7 @@ Features:
       `).join("")}
     </ek-carousel>
   </div>
-`,R=()=>`
+`,V=()=>`
   <ek-carousel>
     ${[{title:"Nature",image:"https://source.unsplash.com/300x200/?nature"},{title:"Architecture",image:"https://source.unsplash.com/300x200/?architecture"},{title:"Technology",image:"https://source.unsplash.com/300x200/?technology"},{title:"Food",image:"https://source.unsplash.com/300x200/?food"}].map(({title:t,image:i})=>`
       <div style="
@@ -194,7 +244,7 @@ Features:
       </div>
     \`).join('')}
   </ek-carousel>
-\``,...(te=(ee=j.parameters)==null?void 0:ee.docs)==null?void 0:te.source}}};var ie,ne,se;V.parameters={...V.parameters,docs:{...(ie=V.parameters)==null?void 0:ie.docs,source:{originalSource:`() => \`
+\``,...(te=(ee=j.parameters)==null?void 0:ee.docs)==null?void 0:te.source}}};var ie,ne,se;R.parameters={...R.parameters,docs:{...(ie=R.parameters)==null?void 0:ie.docs,source:{originalSource:`() => \`
   <div>
     <p style="margin-bottom: 1rem;">Resize the window to see how the carousel adapts:</p>
     <ek-carousel>
@@ -214,7 +264,7 @@ Features:
       \`).join('')}
     </ek-carousel>
   </div>
-\``,...(se=(ne=V.parameters)==null?void 0:ne.docs)==null?void 0:se.source}}};var re,ae,oe;R.parameters={...R.parameters,docs:{...(re=R.parameters)==null?void 0:re.docs,source:{originalSource:`() => \`
+\``,...(se=(ne=R.parameters)==null?void 0:ne.docs)==null?void 0:se.source}}};var ae,re,oe;V.parameters={...V.parameters,docs:{...(ae=V.parameters)==null?void 0:ae.docs,source:{originalSource:`() => \`
   <ek-carousel>
     \${[{
   title: 'Nature',
@@ -245,4 +295,4 @@ Features:
       </div>
     \`).join('')}
   </ek-carousel>
-\``,...(oe=(ae=R.parameters)==null?void 0:ae.docs)==null?void 0:oe.source}}};const fe=["Basic","Alignment","VaryingWidths","ResponsiveBehavior","RichContent"];export{E as Alignment,b as Basic,V as ResponsiveBehavior,R as RichContent,j as VaryingWidths,fe as __namedExportsOrder,ge as default};
+\``,...(oe=(re=V.parameters)==null?void 0:re.docs)==null?void 0:oe.source}}};const fe=["Basic","Alignment","VaryingWidths","ResponsiveBehavior","RichContent"];export{E as Alignment,b as Basic,R as ResponsiveBehavior,V as RichContent,j as VaryingWidths,fe as __namedExportsOrder,ve as default};
