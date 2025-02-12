@@ -508,8 +508,23 @@
     console.warn('unable to connect to top frame for connecting dev tools');
   }
 </script>
+<link rel="stylesheet" href="../styles/index.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
 
-    <script type="module" crossorigin src="./assets/iframe-d3jT-BXK.js"></script>
+<!-- Ensure Web Components polyfills are loaded -->
+<script>
+    if (!window.customElements) {
+        document.write('<!--');
+    }
+</script>
+<!-- ! DO NOT REMOVE THIS COMMENT, WE NEED ITS CLOSING MARKER --> 
+    <script type="module" crossorigin src="./assets/iframe-CtlMHn0V.js"></script>
   </head>
 
   <body>

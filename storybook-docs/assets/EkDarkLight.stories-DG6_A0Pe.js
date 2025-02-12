@@ -1,4 +1,4 @@
-var N=Object.defineProperty;var g=n=>{throw TypeError(n)};var L=(n,t,e)=>t in n?N(n,t,{enumerable:!0,configurable:!0,writable:!0,value:e}):n[t]=e;var u=(n,t,e)=>L(n,typeof t!="symbol"?t+"":t,e),k=(n,t,e)=>t.has(n)||g("Cannot "+e);var y=(n,t,e)=>(k(n,t,"read from private field"),e?e.call(n):t.get(n)),h=(n,t,e)=>t.has(n)?g("Cannot add the same private member more than once"):t instanceof WeakSet?t.add(n):t.set(n,e);var v=(n,t,e)=>(k(n,t,"access private method"),e);import{l as O}from"./EkIcon-Bitc-VNF.js";import{E as p}from"./EkButton-CV6Wai5n.js";var d,c,I;const m=class m extends HTMLElement{constructor(){super();h(this,c);h(this,d,e=>{var s;e.preventDefault(),e.stopPropagation(),this.isDark=!this.isDark,(s=this.shadowRoot.querySelector("ek-button"))==null||s.setAttribute("icon",this.isDark?"sun":"moon")});this.attachShadow({mode:"open"})}get isDark(){return this.getAttribute("theme")==="dark"}set isDark(e){const s=e?"dark":"light";this.setAttribute("theme",s),localStorage.setItem("theme",s),document.documentElement.classList.toggle("dark-theme",e)}connectedCallback(){const e=localStorage.getItem("theme");this.isDark=e!==null?e==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches,v(this,c,I).call(this)}};d=new WeakMap,c=new WeakSet,I=function(){var s;const e=`<ek-button icon="${this.isDark?"sun":"moon"}" icon-only variant="text" size="small"></ek-button>`;this.shadowRoot.innerHTML=O(import.meta.url,m.elemName)+e,(s=this.shadowRoot.querySelector("ek-button"))==null||s.addEventListener("click",y(this,d))},u(m,"elemName","ek-dark-light");let r=m;customElements.get(r.elemName)||customElements.define(r.elemName,r);customElements.get(p.elemName)||customElements.define(p.elemName,p);const j={title:"Elements/ek-dark-light",component:"ek-dark-light",tags:["autodocs"],parameters:{docs:{description:{component:`
+import{E as s}from"./EkDarkLight-DVBSJAbR.js";import{E as a}from"./EkButton-BT1Gk506.js";import"./EkIcon-Bitc-VNF.js";customElements.get(s.elemName)||customElements.define(s.elemName,s);customElements.get(a.elemName)||customElements.define(a.elemName,a);const x={title:"Elements/ek-dark-light",component:"ek-dark-light",tags:["autodocs"],parameters:{docs:{description:{component:`
 # EkDarkLight Component
 
 A simple and elegant dark/light theme toggle component that persists user preferences.
@@ -60,11 +60,11 @@ The component internally handles:
 - All modern browsers
 - Requires JavaScript enabled
 - Uses standard Web Components APIs
-        `}}}},o=()=>`
+        `}}}},e=()=>`
   <div style="padding: 20px;">
     <ek-dark-light></ek-dark-light>
   </div>
-`,a=()=>`
+`,t=()=>`
   <div style="
     padding: 20px;
     display: flex;
@@ -93,7 +93,7 @@ The component internally handles:
       <ek-button variant="outline">Outline Button</ek-button>
     </div>
   </div>
-`,i=()=>`
+`,n=()=>`
   <div style="padding: 20px;">
     <div style="margin-bottom: 1rem;">
       <p>This component automatically syncs with your system theme preference on initial load.</p>
@@ -101,7 +101,7 @@ The component internally handles:
     </div>
     <ek-dark-light></ek-dark-light>
   </div>
-`,l=()=>`
+`,r=()=>`
   <div style="padding: 20px;">
     <div style="margin-bottom: 1rem;">
       <p>The selected theme is persisted in localStorage.</p>
@@ -109,11 +109,11 @@ The component internally handles:
     </div>
     <ek-dark-light></ek-dark-light>
   </div>
-`;var b,f,x;o.parameters={...o.parameters,docs:{...(b=o.parameters)==null?void 0:b.docs,source:{originalSource:`() => \`
+`;var i,o,l;e.parameters={...e.parameters,docs:{...(i=e.parameters)==null?void 0:i.docs,source:{originalSource:`() => \`
   <div style="padding: 20px;">
     <ek-dark-light></ek-dark-light>
   </div>
-\``,...(x=(f=o.parameters)==null?void 0:f.docs)==null?void 0:x.source}}};var S,w,T;a.parameters={...a.parameters,docs:{...(S=a.parameters)==null?void 0:S.docs,source:{originalSource:`() => \`
+\``,...(l=(o=e.parameters)==null?void 0:o.docs)==null?void 0:l.source}}};var d,c,m;t.parameters={...t.parameters,docs:{...(d=t.parameters)==null?void 0:d.docs,source:{originalSource:`() => \`
   <div style="
     padding: 20px;
     display: flex;
@@ -142,7 +142,7 @@ The component internally handles:
       <ek-button variant="outline">Outline Button</ek-button>
     </div>
   </div>
-\``,...(T=(w=a.parameters)==null?void 0:w.docs)==null?void 0:T.source}}};var D,E,C;i.parameters={...i.parameters,docs:{...(D=i.parameters)==null?void 0:D.docs,source:{originalSource:`() => \`
+\``,...(m=(c=t.parameters)==null?void 0:c.docs)==null?void 0:m.source}}};var p,h,g;n.parameters={...n.parameters,docs:{...(p=n.parameters)==null?void 0:p.docs,source:{originalSource:`() => \`
   <div style="padding: 20px;">
     <div style="margin-bottom: 1rem;">
       <p>This component automatically syncs with your system theme preference on initial load.</p>
@@ -150,7 +150,7 @@ The component internally handles:
     </div>
     <ek-dark-light></ek-dark-light>
   </div>
-\``,...(C=(E=i.parameters)==null?void 0:E.docs)==null?void 0:C.source}}};var B,A,P;l.parameters={...l.parameters,docs:{...(B=l.parameters)==null?void 0:B.docs,source:{originalSource:`() => \`
+\``,...(g=(h=n.parameters)==null?void 0:h.docs)==null?void 0:g.source}}};var u,k,y;r.parameters={...r.parameters,docs:{...(u=r.parameters)==null?void 0:u.docs,source:{originalSource:`() => \`
   <div style="padding: 20px;">
     <div style="margin-bottom: 1rem;">
       <p>The selected theme is persisted in localStorage.</p>
@@ -158,4 +158,4 @@ The component internally handles:
     </div>
     <ek-dark-light></ek-dark-light>
   </div>
-\``,...(P=(A=l.parameters)==null?void 0:A.docs)==null?void 0:P.source}}};const q=["Basic","ThemeDemo","SystemThemeSync","ThemePersistence"];export{o as Basic,i as SystemThemeSync,a as ThemeDemo,l as ThemePersistence,q as __namedExportsOrder,j as default};
+\``,...(y=(k=r.parameters)==null?void 0:k.docs)==null?void 0:y.source}}};const S=["Basic","ThemeDemo","SystemThemeSync","ThemePersistence"];export{e as Basic,n as SystemThemeSync,t as ThemeDemo,r as ThemePersistence,S as __namedExportsOrder,x as default};

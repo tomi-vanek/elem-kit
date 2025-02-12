@@ -183,14 +183,14 @@ LargeButton.args = {
 // Icon examples
 export const WithStartIcon = Template.bind({});
 WithStartIcon.args = {
-  icon: 'arrow-right',
-  label: 'Next',
+  icon: 'arrow-left',
+  label: 'Previous',
 };
 
 export const WithEndIcon = Template.bind({});
 WithEndIcon.args = {
   icon: 'arrow-right',
-  'icon-position': 'end',
+  iconPosition: 'end',
   label: 'Next',
 };
 
