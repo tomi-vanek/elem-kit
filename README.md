@@ -13,11 +13,21 @@ npm install elem-kit
 
 ## Usage
 
-Use the components in your project by importing the `index.js` file.
+For fast start you can use all components in your project by importing the `index.js` file.
 
 ```html
-<script src="./node_modules/elem-kit/index.js"></script>
+<script type="module" src="./node_modules/elem-kit/comp/index.js"></script>
 ```
+
+Optimize imports by selectively importing only the components you need.
+
+```html
+<script type="module" src="./node_modules/elem-kit/comp/ek-button.js"></script>
+```
+
+
+
+
 
 ## Technical details
 

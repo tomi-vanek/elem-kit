@@ -1,4 +1,4 @@
-import '../elem-kit/index.js';
+import '../comp/index.js';
 
 /** @type { import('@storybook/web-components').Preview } */
 const preview = {

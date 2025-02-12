@@ -1,6 +1,6 @@
 {
   "name": "elem-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight web components library",
   "author": "Tomi Vanek",
   "license": "MIT",
@@ -8,7 +8,9 @@
     "start": "web-dev-server --node-resolve --open --watch",
     "test": "web-test-runner elem-kit/**/*.test.js --node-resolve",
     "sb:start": "storybook dev -p 6006",
-    "sb:build": "storybook build --output-dir storybook-docs"
+    "sb:build": "storybook build --output-dir docs",
+    "predeploy": "npm run sb:build",
+    "deploy": "gh-pages -d docs"
   },
   "keywords": [
     "web-components",
@@ -28,6 +30,7 @@
     "@storybook/web-components-vite": "^8.0.0",
     "@web/dev-server": "^0.4.6",
     "@web/test-runner": "^0.19.0",
+    "gh-pages": "^6.3.0",
     "storybook": "^8.0.0",
     "vite": "^6.1.0"
   }
