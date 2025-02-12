@@ -1,14 +1,19 @@
 # Elem Kit
 
-Set of standard web components
+Set of standard web components. Browser is the framework.
+Let's make web development great again.
 
 ## Installation
+
+Install the package using npm.
 
 ```bash
 npm install elem-kit
 ```
 
 ## Usage
+
+Use the components in your project by importing the `index.js` file.
 
 ```html
 <script src="./node_modules/elem-kit/index.js"></script>
@@ -17,6 +22,7 @@ npm install elem-kit
 ## Technical details
 
 * [Modern Web](https://modern-web.dev/)
+* [Open Web Components](https://open-wc.org/)
 
 References:
 
