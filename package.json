@@ -4,6 +4,7 @@
   "description": "Lightweight web components library",
   "author": "Tomi Vanek",
   "license": "MIT",
+  "homepage": "https://tomi-vanek.github.io/elem-kit/",
   "scripts": {
     "start": "web-dev-server --node-resolve --open --watch",
     "test": "web-test-runner elem-kit/**/*.test.js --node-resolve",
