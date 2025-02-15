@@ -11,7 +11,8 @@
     "sb:start": "storybook dev -p 6006",
     "sb:build": "storybook build --output-dir docs",
     "predeploy": "npm run sb:build",
-    "deploy": "gh-pages -d docs"
+    "deploy": "gh-pages -d docs",
+    "publish": "npm run sb:build && npm run deploy && git push"
   },
   "keywords": [
     "web-components",
