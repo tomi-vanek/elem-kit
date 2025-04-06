@@ -25,16 +25,13 @@ Optimize imports by selectively importing only the components you need.
 <script type="module" src="./node_modules/elem-kit/comp/ek-button.js"></script>
 ```
 
-
-
-
-
 ## Technical details
 
 * [Modern Web](https://modern-web.dev/)
 * [Open Web Components](https://open-wc.org/)
+* [Custom Elements Best Practices](https://web.dev/articles/custom-elements-best-practices)
 
-References:
+### References
 
 * [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)
 * [Custom Elements](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry)

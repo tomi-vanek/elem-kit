@@ -77,11 +77,18 @@
                 assumenda est.</p>
 
             <div class="button-container">
-                <ek-button icon="check">Click me</ek-button>
-                <ek-button icon="heart" icon-only variant="secondary"></ek-button>
-                <ek-button icon="google" icon-position="end" onclick="window.location.href='https://www.google.com'">Go to
+                <ek-button icon="check" id="checkButton">Click me</ek-button>
+                <ek-button icon="heart" id="heartButton" icon-only variant="secondary"></ek-button>
+                <ek-button icon="google" id="googleButton" icon-position="end" onclick="window.location.href='https://www.google.com'">Go to
                     Google</ek-button>
             </div>
+
+            <script>
+                // Add click handlers to all buttons
+                document.querySelectorAll('ek-button').forEach(btn => {
+                    btn.addEventListener('click', e => console.log(`Button clicked: ${btn.id || 'unnamed'}`));
+                });
+            </script>
 
         </section>
     </main>

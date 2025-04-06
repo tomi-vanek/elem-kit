@@ -35,3 +35,4 @@ web_modules/
 .vscode-test
 
 /storybook-static
+/node_modules
